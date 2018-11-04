@@ -1,0 +1,35 @@
+body {
+  font-family: 'Aref Ruqaa', serif;
+  background-color:black;
+  color:#009bd5;
+  font-size:144px
+}
+
+a {
+  color:#009bd5;
+  text-decoration:none
+}
+
+a:hover {
+  color:white
+}
+
+#happy {
+  position:fixed;
+  top:-31px;
+  left:387px
+}
+
+#holidays {
+  position:fixed;
+  top:167px;
+  left:252px
+}
+
+#star {
+  font-family: arial;
+  position:fixed;
+  top:204px;
+  left:449px;
+  font-size:160px
+}

@@ -1,0 +1,13 @@
+{
+   "sites":
+      [
+         {"url":"http://url1"},
+         {"url":"http://url2"},
+         {"url":"http://url3"},
+         {"url":"http://url4"},
+         {"url":"http://url5"}
+      ],
+   "width":"1920",
+   "height":"1080",
+   "interval":"30000"
+}

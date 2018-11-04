@@ -1,0 +1,21 @@
+function callIL2Helpdesk()
+{
+	if (ryanAvailable || keithAvailable)
+	{
+		IL2HelpdeskPizzaFund += getFromIL2Employee($5);
+		IL2Employee.status = "happy";
+	}
+	if (IL1HelpdeskAvailable)
+	{
+		IL1HelpdeskPizzaFund += getFromIL2Employee($10);
+		IL2Employee.status = "happy";
+	}
+	else
+	{
+		setIL2EmployeeStatus("patient","understanding");
+		if (onCallITStaffMember == "TJay")
+			break;
+		else
+			IL2Employee.status = "happy";
+	}
+}

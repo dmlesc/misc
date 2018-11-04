@@ -1,0 +1,84 @@
+{
+   "English": {
+      "iTunes iOS": {
+         "Current": "1.55.11190",
+         "CurrentStatus": "none",
+         "Beta": "1.68.13796",
+         "BetaStatus": "waiting for review"
+      },
+      "iTunes Mac": {
+         "Current": "1.55.11190",
+         "CurrentStatus": "none",
+         "Beta": "1.68.13796",
+         "BetaStatus": "waiting for review"
+      },
+      "Google Play": {
+         "Current": "1.55.11190",
+         "CurrentStatus": "none",
+         "Beta": "1.68.13807",
+         "BetaStatus": "none"
+      },
+      "Amazon (Kindle)": {
+         "Current": "1.55.11190",
+         "CurrentStatus": "none",
+         "Beta": "1.68.13807",
+         "BetaStatus": "none"
+      },
+      "Chrome Web": {
+         "Current": "1.55.11190",
+         "CurrentStatus": "none",
+         "Beta": "1.68.13805",
+         "BetaStatus": "none"
+      },
+      "Windows": {
+         "Current": "1.55.11190",
+         "CurrentStatus": "none",
+         "Beta": "none",
+         "BetaStatus": "none"
+      },
+	  "Production Cloud (web player)": {
+         "Current": "1.64.12954",
+         "CurrentStatus": "none",
+         "Beta": "1.68.13807",
+         "BetaStatus": "none"
+      }
+   },
+   "Espanol": {
+      "iTunes iOS": {
+         "Current": "2.1.108",
+         "CurrentStatus": "none",
+         "Beta": "none",
+         "BetaStatus": "can't submit due to a packaging error"
+      },
+      "iTunes Mac": {
+         "Current": "none",
+         "CurrentStatus": "can't submit due to a packaging error",
+         "Beta": "none",
+         "BetaStatus": "none"
+      },
+      "Google Play": {
+         "Current": "2.1.108",
+         "CurrentStatus": "none",
+         "Beta": "2.2.162",
+         "BetaStatus": "none"
+      },
+      "Amazon (Kindle)": {
+         "Current": "2.1.108",
+         "CurrentStatus": "none",
+         "Beta": "2.2.162",
+         "BetaStatus": "none"
+      },
+      "Chrome Web": {
+         "Current": "2.1.108",
+         "CurrentStatus": "none",
+         "Beta": "Unavailable",
+         "BetaStatus": "none"
+      },
+      "Windows": {
+         "Current": "1.1.99",
+         "CurrentStatus": "none",
+         "Beta": "Unavailable",
+         "BetaStatus": "can't submit due to a packaging error"
+      }
+   }
+}

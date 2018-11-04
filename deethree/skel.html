@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>d3</title>
+   <script src="d3.min.js"></script>
+   <script src="viz.js"></script>
+   <style>
+      body {background-color:black;color:#009bd5;font-family:arial;font-size:14px}
+      a {color:white;text-decoration:none}
+      a.colored {color:#009bd5;text-decoration:none}
+      a:hover {text-decoration:underline}
+      input {background-color:black;color:white;font-family:arial;font-size:14px}
+      textarea {background-color:black;color:white;font-family:arial;font-size:13px}
+      select {background-color:black;color:white;font-family:arial;font-size:13px}
+      table {border-spacing:5px;background-color:#2D2D30;color:white}
+      th {background-color:#252526;text-align:left;padding:5px;border: 1px solid #3F3F46;}
+      th.app {background-color:#007ACC}
+      tr:hover {background-color:#007ACC}
+      .left20 {position:relative;left:20px}
+      .up5 {position:relative;top:-5px}
+      .up20 {position:relative;top:-20px}
+      .big {font-size:16px}
+      .retrieving {position:relative;left:20px;color:lime}
+      #idName {position:fixed;top:0px;left:0px;display:none}
+   </style>
+</head>
+<body onload="init()">
+   <div id="division"></div>
+   <div id="class" class="up5"></div>
+   <a id="anchor" href="javascript:somefunction()">sometext</a>
+   <img id="image" src="image.png" height="88" width="88">
+</body>
+</html>

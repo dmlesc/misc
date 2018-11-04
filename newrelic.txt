@@ -1,0 +1,61 @@
+NRQL
+
+Throughput by Call
+  SELECT count(*) from Transaction FACET name LIMIT 15 WHERE appName = 'Imagine.Reports.API' TIMESERIES 1 minute
+Error Throughput by Call
+  SELECT count(*) from Transaction FACET name WHERE appName = 'Imagine.Reports.API' AND `response.status` >= '400' TIMESERIES 1 minute LIMIT 1000
+Avg Error Rate
+  SELECT percentage(count(*), WHERE appName = 'Imagine.Reports.API' AND `response.status` >= '400' ) FROM Transaction where appName ='Imagine.Reports.API'
+Avg Duration (ms) by Call
+  SELECT average(duration) * 1000 from Transaction FACET name LIMIT 15 WHERE appName = 'Imagine.Reports.API' TIMESERIES 1 minute
+Avg Duration (ms)
+  SELECT average(duration) * 1000 as 'duration (ms)' FROM Transaction WHERE appName='Imagine.Reports.API'
+Percentile
+  SELECT percentile(duration * 1000, 1, 10, 25, 50, 75, 90, 99) as 'ms', average(duration * 1000) as 'ms (avg)' FROM Transaction WHERE appName = 'Imagine.Reports.API' AND `response.status` < '400' TIMESERIES 1 minute
+Percent Total Duration
+  SELECT percentage(sum(duration), WHERE appName = 'Imagine.Sequencer.API' and name LIKE '%StudentData%') FROM Transaction where appName ='Imagine.Sequencer.API'
+Percent Total Errors
+  SELECT percentage(count(*), WHERE appName = 'Imagine.Sequencer.API' AND `response.status` >= '400' and name LIKE '%GetNextActivity%' OR name LIKE '%ProcessCompletedContent%' OR name LIKE '%SaveActivityProgress%') FROM Transaction where appName ='Imagine.Sequencer.API' AND `response.status` >= '400'
+Percent Total Calls
+  SELECT percentage(count(*), WHERE appName = 'Imagine.Sequencer.API' and name LIKE '%GetNextActivity%' OR name LIKE '%ProcessCompletedContent%' OR name LIKE '%SaveActivityProgress%') FROM Transaction where appName ='Imagine.Sequencer.API'
+
+
+
+
+New Relic University
+   Insights
+
+SELECT uniqueCount(`response.status`) FROM Transaction SINCE 1 HOUR AGO COMPARE WITH 1 WEEK AGO TIMESERIES
+SELECT uniqueCount(`UserName`) FROM Transaction where appName='Imagine.Sequencer.API' TIMESERIES since today
+SELECT percentile(duration, 95) FROM Transaction FACET name SINCE 1 HOUR AGO TIMESERIES
+SELECT average(duration) * 1000 as 'duration (ms)' FROM Transaction WHERE appName='Imagine.Sequencer.API' and name LIKE '%GetNextActivity%' LIMIT 1000 compare with 1 day ago
+SELECT histogram(percent_viewed, 1, 20) FROM VideoView LIMIT 30 SINCE 4 weeks ago FACET video_name
+
+SELECT count(*) FROM Transaction SINCE '2016-11-14 00:00:00' UNTIL '2016-11-18 00:00:00' WHERE appName = 'Imagine.Sequencer.API' and errorType >= '400' and Sitecodes = '9024000' TIMESERIES
+SELECT count(*) FROM Transaction SINCE '2016-11-28 00:00:00' UNTIL '2016-12-02 00:00:00' WHERE appName = 'Imagine.Sequencer.API' and errorType >= '400' and Sitecodes = '9024000'
+SELECT count(*) FROM Transaction SINCE '2016-12-12 00:00:00' UNTIL '2016-12-16 00:00:00' WHERE appName = 'Imagine.Sequencer.API' and errorType >= '400' and Sitecodes = '9024000'
+
+   Aggregator Functions
+      count(*)
+      uniqueCount(*)
+      uniques(*)
+      min(*)
+      max(*)
+      sum(*)
+      average(*)
+
+SELECT min(duration), max(duration), average(duration) from Transaction
+
+SELECT count(session) FROM Transaction SINCE 1 week ago FACET dateOf(timestamp)
+SELECT count(session) FROM Transaction SINCE 1 day ago FACET hourOf(timestamp)
+SELECT count(duration) FROM Transaction SINCE 1 day ago FACET buckets(duration, 5, 10)
+SELECT count(duration) FROM Transaction WHERE duration >= 5 SINCE 1 day ago FACET buckets(duration, 15, 10)
+
+SELECT histogram(duration, 3, 20) FROM Transaction SINCE 1 week ago
+SELECT histogram(duration, 1, 20) FROM Transaction SINCE 1 month ago FACET SiteCodes
+
+SELECT percentile(duration, 95, 99), average(duration) FROM Transaction TIMESERIES 1 minute
+
+
+https://newrelic.com/webinar/nru-apm-power-user-tips-and-tricks
+   Thread Profiler

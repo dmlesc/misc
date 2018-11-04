@@ -1,0 +1,22 @@
+{
+  "name": "logsload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fields.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/il-davidlurth/logsload.git"
+  },
+  "author": "dml",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/il-davidlurth/logsload/issues"
+  },
+  "homepage": "https://github.com/il-davidlurth/logsload#readme",
+  "dependencies": {
+    "mssql": "^4.0.4"
+  }
+}

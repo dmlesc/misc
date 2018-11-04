@@ -1,0 +1,14 @@
+{
+  "name": "apigz_local",
+  "version": "1.0.0",
+  "description": "compressed docs save locally",
+  "main": "apigz_local.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Lurth",
+  "license": "MIT",
+  "dependencies": {
+    "azure-storage": "^1.3.1"
+  }
+}

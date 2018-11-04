@@ -1,0 +1,23 @@
+{
+  "name": "watchemdirs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "watchemdirs.js",
+  "dependencies": {
+    "chokidar": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/il-davidlurth/watchemdirs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/il-davidlurth/watchemdirs/issues"
+  },
+  "homepage": "https://github.com/il-davidlurth/watchemdirs#readme"
+}

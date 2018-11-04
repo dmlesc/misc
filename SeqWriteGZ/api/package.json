@@ -1,0 +1,14 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "uncompressed student docs",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Lurth",
+  "license": "MIT",
+  "dependencies": {
+    "azure-storage": "^1.3.1"
+  }
+}

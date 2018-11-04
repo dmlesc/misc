@@ -1,0 +1,18 @@
+
+
+function makeSuccessIL(employee) {
+   while (numberOfChildrenWhoDontKnowEnglish > 0) {
+      employee.stomachContents = getFromPantry("beef jerky","skittles","clif bar");
+      employee.mindset = loadStrategicObjectives("EASY");
+      employee.status = "AYE!";
+   }
+   employee.status = "retired";
+}
+
+var mystyle = ["maintainability",
+               "reliability",
+               "compactness",
+               "reuse",
+               "simplification",
+               "generalization",
+               "orthogonality"];

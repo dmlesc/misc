@@ -1,0 +1,40 @@
+<html>
+<head>
+   <title>psycle</title>
+   <script>
+      var psycle, index, numberOfSites, timer, interval, psycling;
+
+      function init() {
+         document.body.style.background = "white";
+         var ajax = new XMLHttpRequest();
+         ajax.onreadystatechange=function() {
+            if (ajax.readyState==4 && ajax.status==200) {
+               psycle = JSON.parse(ajax.responseText);
+               index = 0;
+               numberOfSites = psycle.sites.length;
+               getID("iframe").width = psycle.width;
+               getID("iframe").height = psycle.height;
+               interval = psycle.interval;
+               psycling = true;
+               showSite();
+            }
+         }
+         ajax.open("GET", "psycle/config.json", true);
+         ajax.send();
+      }
+      function showSite() {
+         if (index == numberOfSites)
+            window.location.reload();
+         getID("iframe").src = psycle.sites[index].url;
+         index++;
+         timer = setTimeout("showSite()",interval);
+      }
+      function getID(id){return document.getElementById(id);}
+   </script>
+   <style>
+   </style>
+</head>
+<body onload="init()">
+   <iframe id="iframe" frameborder="0"></iframe>
+</body>
+</html>
